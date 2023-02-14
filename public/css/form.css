@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@import url(./global.css);
+@import url(./navbar.css);
+@import url(./footer.css);
+
+form {
+  width: min(100%, 620px);
+  height: calc(100vh - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  padding-top: 4rem;
+  margin-inline: auto;
+}
+
+form > * {
+  font-size: 1rem;
+}
+
+legend {
+  font-size: 2.5rem !important;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.error-login {
+  color: white;
+  font-size: 0.8rem;
+  background: var(--bg-red);
+  padding: 1rem;
+}
+
+.error-border {
+  border-color: var(--red) !important;
+}
+
+.error-register {
+  color: var(--red);
+  font-size: 0.9rem;
+}
+
+form input {
+  padding: 1rem;
+}
+
+form input:not(:last-child) {
+  background: var(--bg-grey);
+  border: 1px solid var(--bg-grey);
+}
+
+form input[type="submit"] {
+  font-weight: 600;
+  border: 1px solid var(--secondary);
+  padding-block: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+  border: 1px solid black;
+}
+
+@media (max-width: 642px) {
+  form > * {
+    font-size: 0.8rem;
+  }
+}

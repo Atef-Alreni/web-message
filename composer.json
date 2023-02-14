@@ -1,0 +1,14 @@
+{
+  "name": "acer/web-message",
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "Atef Alreni",
+      "email": "atefalreni123456@hotmail.com"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@import url(./global.css);
+@import url(./navbar.css);
+@import url(./footer.css);
+
+/* Logged In */
+.logged-in {
+  text-align: center;
+  height: calc(100vh - 450px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 5rem;
+}
+
+.logged-in h1 {
+  color: var(--primary);
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.logged-in p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-block: 2rem;
+}
+
+.hero-text {
+  width: min(100%, var(--max-width-hero));
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.hero-text h1 {
+  font-size: 3.25rem;
+  font-weight: 600;
+}
+
+.hero-text strong {
+  color: var(--primary);
+}
+
+.hero-text h1 + p {
+  font-family: 300;
+  max-width: 32rem;
+  margin-block: 1rem;
+}
+
+.hero form {
+  max-width: var(--max-width-hero);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.hero-text input {
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.hero-text input[type="text"] {
+  font-size: 0.8rem;
+  width: min(80%, 520px);
+  height: 3rem;
+  background: var(--bg-grey);
+}
+
+.hero-text input[type="submit"] {
+  font-size: 1rem;
+  width: min(17%, 110px);
+  height: 3rem;
+  background: var(--bg-primary);
+}
+
+.hero-text input[type="submit"]:hover,
+.hero-text input[type="submit"]:focus {
+  border: 1px solid black;
+}
+
+.cards {
+  max-width: var(--max-width-hero);
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  margin-top: 1.75rem;
+}
+
+.card {
+  max-width: 17.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+}
+
+.card a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: max-content;
+  display: flex;
+  border-radius: 3px;
+  padding: 0.5rem 2rem;
+  margin-top: 0.5rem;
+  transition: all ease 500ms;
+}
+
+.card-blue {
+  border: 3px solid var(--primary);
+}
+
+.card-blue h3 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.card-blue a {
+  color: var(--primary);
+  border: 3px solid var(--primary);
+}
+
+.card-blue a:hover,
+.card-blue a:focus {
+  color: white;
+  background: var(--bg-primary);
+}
+
+.card-green {
+  border: 3px solid var(--secondary);
+}
+
+.card-green h3 {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.card-green a {
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+}
+
+.card-green a:hover,
+.card-green a:focus {
+  color: white;
+  background: var(--bg-secondary);
+}
+
+@media (max-width: 1240px) {
+  .hero-text {
+    width: 75%;
+  }
+
+  .hero-img-container {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-text {
+    width: 72%;
+  }
+
+  .hero-img-container {
+    width: 20%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-text {
+    width: 90%;
+  }
+
+  .hero-img-container {
+    display: none;
+  }
+}
+
+@media (max-width: 764px) {
+  :root {
+    --max-width-hero: 100%;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .cards {
+    display: none;
+  }
+}
+
+@media (max-width: 642px) {
+  .logged-in h1 {
+    font-size: 4rem;
+  }
+
+  .logged-in p {
+    font-size: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-text input[type="text"] {
+    width: 70%;
+  }
+
+  .hero-text input[type="submit"] {
+    font-size: 0.9rem;
+    width: 30%;
+  }
+}
+
+@media (max-width: 424px) {
+  .logged-in h1 {
+    font-size: 2.25rem;
+  }
+
+  .logged-in p {
+    font-size: 1.25rem;
+  }
+
+  .hero-text form {
+    flex-direction: column;
+  }
+
+  .hero-text form * {
+    width: var(--max-width-hero) !important;
+  }
+}

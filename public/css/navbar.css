@@ -1,0 +1,45 @@
+.header {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.logout-btn {
+  cursor: pointer;
+  color: white;
+  background: var(--bg-red);
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  transition: all ease 500ms;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+  color: black;
+  background: white;
+}
+
+.nav a:first-child:hover,
+.nav a:first-child:focus {
+  opacity: 0.8;
+}
+
+@media (max-width: 642px) {
+  .nav p {
+    display: none;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+}
