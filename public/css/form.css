@@ -7,16 +7,16 @@
 
 form {
   width: min(100%, 620px);
-  height: calc(100vh - 300px);
+  min-height: calc(100vh - 200px);
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   gap: 1.25rem;
-  padding-top: 4rem;
+  padding-block: 3rem 7.5rem;
   margin-inline: auto;
 }
 
-form > * {
+form * {
   font-size: 1rem;
 }
 
@@ -26,27 +26,17 @@ legend {
   margin-bottom: 0.25rem;
 }
 
-.error-login {
-  color: white;
-  font-size: 0.8rem;
-  background: var(--bg-red);
-  padding: 1rem;
-}
-
-.error-border {
-  border-color: var(--red) !important;
-}
-
-.error-register {
-  color: var(--red);
-  font-size: 0.9rem;
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 form input {
   padding: 1rem;
 }
 
-form input:not(:last-child) {
+form input:not(input[type="submit"]) {
   background: var(--bg-grey);
   border: 1px solid var(--bg-grey);
 }

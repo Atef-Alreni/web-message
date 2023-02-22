@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@import url(./global.css);
+@import url(./navbar.css);
+@import url(./footer.css);
+
+.miscellaneous {
+  width: min(90%, 800px);
+  min-height: calc(100vh - 170px);
+  display: flex;
+  flex-direction: column;
+  padding-block: 3rem 7.5rem;
+}
+
+.miscellaneous h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.miscellaneous div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 642px) {
+  .miscellaneous {
+    min-height: calc(100vh - 260px);
+  }
+
+  .miscellaneous h1 {
+    font-size: 3rem;
+  }
+
+  .miscellaneous p {
+    font-size: 0.9rem;
+  }
+}

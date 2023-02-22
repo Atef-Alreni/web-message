@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/form.css">
-    <title>Document</title>
+    <title>WEBMESSAGE | Log In</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <form action="/login" method="post">
             <legend>Log In</legend>
             <?php if (isset($_SESSION["error"])) : ?>
-                <p class="error-login"><?php echo $_SESSION["error"]; ?></p>
+                <p class="error-box"><?php echo $_SESSION["error"]; ?></p>
             <?php endif; ?>
             <input type="text" placeholder="Username" name="username" required>
             <input type="password" placeholder="Password" name="password" required>

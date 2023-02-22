@@ -1,6 +1,6 @@
 <?php
 
-namespace app;
+namespace app\util;
 
 class Router
 {
@@ -29,19 +29,22 @@ class Router
         }
 
         if ($function) {
-
             if ($function[1] === "logout") {
                 call_user_func($function);
             } else {
                 call_user_func($function, $this);
             }
         } else {
-            echo "Page not found";
+            if (session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+            }
+
+            include_once __DIR__ . "/../view/404.php";
         }
     }
 
     public function renderView($view)
     {
-        include_once __DIR__ . "/view/$view.php";
+        include_once __DIR__ . "/../view/$view.php";
     }
 }

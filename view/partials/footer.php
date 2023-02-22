@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <body>
     <div class="bg-dark relative">
         <p class="creator">Made by Atef Alreni</p>
@@ -21,8 +14,8 @@
                     <h3>Contact Us</h3>
                     <div class="footer-links">
                         <p>Robert Robertson, 1233 NW Bobcat Lane, St. Robe</p>
-                        <a href=""><strong>Email:</strong> example@gmail.com</a>
-                        <a href=""><strong>Number:</strong> 07224923090</a>
+                        <a href="mailto: example@gmail.com"><strong>Email:</strong> example@gmail.com</a>
+                        <a href="tel: 07224923090"><strong>Number:</strong> 07224923090</a>
                     </div>
                 </div>
                 <div class="footer-title-links">
@@ -36,9 +29,9 @@
                 <div class="footer-title-links">
                     <h3>Miscellaneous</h3>
                     <ul class="footer-links">
-                        <li><a href="/404">About</a></li>
-                        <li><a href="/404">Vision</a></li>
-                        <li><a href="/404">Mission</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/vision">Vision</a></li>
+                        <li><a href="/mission">Mission</a></li>
                     </ul>
                 </div>
             </div>

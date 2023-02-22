@@ -2,28 +2,25 @@
 
 namespace app\model;
 
-use app\Database;
+use app\util\Database;
 
-class User
+class User extends Database
 {
-    protected Database $db;
-
-    public function __construct()
+    public function save(string $name, string $email, string $username, string $password)
     {
-        $dsn = "mysql:host=localhost;port=3306;dbname=webmessage";
-        $user = "root";
-        $password = "";
+        $sql = "INSERT INTO users(Name, Email, Username, Password) VALUES(:name, :email, :username, :password)";
+        $stmt = $this->pdo->prepare($sql);
+        $res = $stmt->execute(["name" => $name, "email" => $email, "username" => $username, "password" => $password]);
 
-        $this->db = new Database($dsn, $user, $password);
+        return $res;
     }
 
-    public function save($name, $email, $username, $password)
+    public function findUser(string $username, string $password)
     {
-        return $this->db->registerUser($name, $email, $username, $password);
-    }
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE Username = :username AND Password = :password");
+        $stmt->execute(["username" => $username, "password" => $password]);
+        $res = $stmt->fetch();
 
-    public function findUser($username, $password)
-    {
-        return $this->db->getUser($username, $password);
+        return $res;
     }
 }

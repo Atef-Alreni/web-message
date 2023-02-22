@@ -6,26 +6,91 @@
 @import url(./footer.css);
 
 /* Logged In */
-.logged-in {
-  text-align: center;
-  height: calc(100vh - 450px);
+.logged-in-outer {
+  display: flex;
+  justify-content: center;
+  padding-block: 2.5rem 7.5rem;
+}
+
+.logged-in-inner {
+  width: min(100%, 800px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding-top: 5rem;
+  gap: 2rem;
 }
 
-.logged-in h1 {
+.logged-in-inner > h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.logged-in-inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logged-in-inner textarea {
+  font-size: 1.1rem;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+}
+
+.logged-in-inner input[type="submit"] {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: var(--bg-primary);
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  padding: 1rem;
+  transition: all ease 500ms;
+}
+
+.logged-in-inner textarea:focus {
+  border: 3px solid var(--primary);
+}
+
+.logged-in-inner input[type="submit"]:hover,
+.logged-in-inner input[type="submit"]:focus {
+  color: black;
+  background: white;
+  border-color: black;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.messages-title {
+  margin-block: 1.5rem 1.25rem;
+}
+
+.message-container {
+  border: 3px solid black;
+  border-radius: 3px;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.message-container header {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.message-container header p {
+  font-size: 0.7rem;
+  font-weight: 600;
   color: var(--primary);
-  font-size: 5rem;
-  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
-.logged-in p {
-  font-size: 2rem;
-  font-weight: 600;
+.message-container hr {
+  margin-block: 0.25rem 0.75rem;
 }
 
 /* Hero */
@@ -33,7 +98,7 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  margin-block: 2rem;
+  margin-block: 2rem 7.5rem;
 }
 
 .hero-text {
@@ -206,9 +271,47 @@
     --max-width-hero: 100%;
   }
 
+  .logged-in-inner {
+    gap: 1.75rem;
+  }
+
+  .logged-in-inner > h1 {
+    font-size: 3rem;
+  }
+
+  .logged-in-inner form {
+    gap: 1.25rem;
+  }
+
+  .logged-in-inner textarea {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .logged-in-inner input[type="submit"] {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .messages-container {
+    gap: 1.5rem;
+  }
+
+  .messages-title {
+    margin-block: 1rem 0.75rem;
+  }
+
+  .message-container > p {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: calc(100vh - 410px);
+  }
+
   .hero-text {
     width: 100%;
-    margin-top: 3rem;
+    justify-content: center;
   }
 
   .cards {
@@ -217,16 +320,20 @@
 }
 
 @media (max-width: 642px) {
-  .logged-in h1 {
-    font-size: 4rem;
+  .logged-in-inner > h1 {
+    font-size: 2.5rem;
   }
 
-  .logged-in p {
-    font-size: 2rem;
+  .messages-title {
+    margin-block: 0.25rem 0.75rem;
+  }
+
+  .message-container > p {
+    font-size: 0.8rem;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-text p {
@@ -243,13 +350,21 @@
   }
 }
 
-@media (max-width: 424px) {
-  .logged-in h1 {
-    font-size: 2.25rem;
+@media (max-width: 474px) {
+  .logged-in-inner > h1 {
+    font-size: 2rem;
   }
 
-  .logged-in p {
-    font-size: 1.25rem;
+  .hero-text {
+    gap: 0.75rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero-text p {
+    font-size: 0.8rem;
   }
 
   .hero-text form {
